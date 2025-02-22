@@ -1,9 +1,10 @@
 #include "ns3/netanim-module.h"
 
 
-./ns3 run scratch/test_senct.cc
+./ns3 run scratch/xxxxx.cc
 java -jar tracemetrice.jar
 ./NetAnim 
+gnuplot xxxx.plt
 
 
 set terminal pdf
