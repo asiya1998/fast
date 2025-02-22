@@ -16,14 +16,17 @@ plot "apple.txt" using 1:3 with lines title "BCT",\
 
 
 set terminal pdf
-set output "apple_histogrm.pdf"
-set style fill solid border-1
-set title "apple"
-set xlabel "From_Id_To_Id"
-set ylabel "Tx"
+set output "histogram.pdf"
+set style data histogram
+set style histogram clustered gap 1
+set style fill solid border -1
+set boxwidth 0.9
+set title "City AQI Comparison"
+set xlabel "City"
+set ylabel "AQI"
 set xtics rotate by -45
-plot "apple.txt" using 1:xtic(3) with lines title "BCT",\
-"apple.txt" using 3 with linespoints title "anith eka"
+plot 'mydata.data' using 2:xtic(1) title "AQI Last Month", \
+     '' using 3 title "AQI Current Month"
 
 
 
